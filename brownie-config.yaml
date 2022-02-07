@@ -1,0 +1,18 @@
+#  Configuration file for Brownie project
+
+dependencies:
+    - OpenZeppelin/openzeppelin-contracts@3.1.0
+
+compiler:
+    solc:
+        version: 0.6.12
+        remappings:
+          - "@openzeppelin/contracts=${HOME}/.brownie/packages/OpenZeppelin/openzeppelin-contracts@3.1.0/contracts"
+
+networks:
+    default: development
+    development:
+        gas_limit: max
+        default_contract_owner: false
+
+dotenv: .env
